@@ -29,8 +29,7 @@ async function getOneById(id) {
 }
 
 async function getOneByName(name) {
-  const user = UserModel.findOne({ name }, { password: 0 });
-  return user;
+  return UserModel.findOne({ name }, { password: 0 });
 }
 
 async function list(params) {

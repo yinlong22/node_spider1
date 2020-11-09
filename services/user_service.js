@@ -64,6 +64,5 @@ module.exports.getUserById = async function (userId) {
 module.exports.createSubscription = async function (userId, url) {
   const user = await User.getOneById(userId);
   if (!user) throw Error('No such user!');
-  const sub = Subscription.insert(userId, url);
-  return sub;
+  return Subscription.insert(userId, url);
 };
